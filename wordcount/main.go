@@ -16,13 +16,7 @@ func main() {
 
 	var wordsWithCount = map[string]int{}
 	for _, word := range words {
-		found, ok := wordsWithCount[word]
-
-		if ok {
-			wordsWithCount[word] = found + 1
-		} else {
-			wordsWithCount[word] = 1
-		}
+		wordsWithCount[word]++
 	}
 
 	for word, count := range wordsWithCount {

@@ -14,7 +14,7 @@ func main() {
 	input, _ := reader.ReadString('\n')
 	words := strings.Fields(input)
 
-	var wordsWithCount = map[string]int{}
+	wordsWithCount := map[string]int{}
 	for _, word := range words {
 		wordsWithCount[word]++
 	}

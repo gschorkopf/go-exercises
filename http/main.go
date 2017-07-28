@@ -1,17 +1,17 @@
 package main
 
 import (
-  "fmt"
+	"fmt"
 	"net/http"
 	"sync"
-  "time"
+	"time"
 )
 
 func query() {
-  timeNow := time.Now()
-  resp, err := http.Get("http://google.com")
+	timeNow := time.Now()
+	resp, err := http.Get("http://manage.fastly.com")
 
-  if err != nil {
+	if err != nil {
 		panic(err)
 	}
 
@@ -20,7 +20,7 @@ func query() {
 		panic(err)
 	}
 
-  fmt.Printf("Status: %s, Response Time: %s\n", resp.Status, time.Since(timeNow))
+	fmt.Printf("Status: %s, Response Time: %s\n", resp.Status, time.Since(timeNow))
 }
 
 func main() {
